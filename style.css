@@ -1,3 +1,8 @@
+:root {
+	--speedCactus: 2s;
+	--speedJump: 0.25s;
+}
+
 .game {
 	width: 600px;
 	height: 200px;
@@ -22,7 +27,8 @@
 	position: relative;
 	top: 110px;
 	left: 580px;
-	animation: cactusMove 1s infinite linear;
+
+	animation: cactusMove var(--speedCactus) infinite linear;
 }
 
 @keyframes cactusMove {
@@ -36,7 +42,7 @@
 }
 
 .jump {
-	animation: jump 0.2s linear;
+	animation: jump var(--speedJump) linear;
 }
 
 @keyframes jump {
@@ -45,15 +51,15 @@
 	}
 
 	25% {
-		top: 125px;
+		top: 100px;
 	}
 
 	50% {
-		top: 75px;
+		top: 50px;
 	}
 
 	75% {
-		top: 125px;
+		top: 100px;
 	}
 
 	100% {
